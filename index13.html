@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    *{
+        background-color: black;
+    }
+    .content{
+        perspective: 1000px;
+        height:250px;
+        width:350px;  
+        margin:200px auto;
+        /* background-color: black; */
+    }
+    .card{
+        width:100%;
+        height:100%;
+        transform-style:preserve-3d;
+        transition:transform 0.6s ease-in-out;
+    }
+     .content:hover .card{
+        transform:rotateY(180deg);
+     }
+    .front, 
+    .backcard{
+        position:absolute;
+        width:100%;
+        height:100%;
+        backface-visibility: hidden;
+        border-radius:15px;
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .front{
+        background-color: white;
+        padding: 20px;
+    }
+
+    .front img{
+        max-width:80%;
+        display:block;
+        margin:65px auto;
+        height:150px;
+        width: 200px;
+        background-color: white;
+    }
+
+    .backcard{
+        position:relative;
+        padding:2px;
+        border-radius: 15px;
+        
+        background-size: 300% 300%;
+        animation:flow-border 3s linear infinite;
+        transform:rotateY(180deg);
+    }
+
+    .backcard-content{
+        background-color: black;
+        color: azure;
+        border-radius: 13px;
+        padding: 16px 20px 12px 20px;
+        height:100%;
+       
+        /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 6%, rgba(0, 212, 255, 1) 13%, rgba(191, 0, 255, 1) 20%, rgba(255, 0, 60, 1) 31%, rgba(255, 208, 0, 1) 43%, rgba(0, 255, 166, 1) 55%, rgba(255, 89, 0, 1) 63%, rgba(0, 255, 200, 1) 78%, rgba(255, 21, 0, 1) 91%); */
+        overflow-y: auto;
+        text-align:left;
+    }
+
+    .name{
+     font-size: 10px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     color:aqua;
+     margin-bottom: 8px;
+    }
+    .title{
+        font-size:18px;
+        margin:8px 0;
+        color:lightcoral;
+      }
+
+      .description{
+        font-size:0.85rem;
+        margin-bottom:10px;
+        line-height: 1.2rem;
+      }
+      .fsd{
+        color: peachpuff;
+        text-transform: capitalize;
+      } 
+      
+      .btn{
+        color:black;
+        background-color: aquamarine;
+        border-radius: 15px;
+        padding: 6px 12px;
+        cursor:pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 5px;
+      }
+</style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="card">
+                <div class="front">
+                  <img src="./tap.png">  
+                </div>
+
+                <div class="backcard">
+                    <div class="backcard-content">
+                        <header>
+                            <p class="name"><strong>TAP Academy</strong></p>
+                        </header>
+                        <h1 class="title">Gamify Learning,Simplify Employment</h1>
+                        <p class="description">
+                            Tap Academy blends AR,Animation, and AI to tech coding,<br/>
+                            <strong class="fsd">Full Stack Web Development</strong>, and tech trends, fostering personalized learning and community engagement.
+                        </p>
+                        <a href="https://www.thetapacademy/.com" target="_blank">
+                            <button class="btn">Learn more</button> 
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
